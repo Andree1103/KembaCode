@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kembacode — Sistematizamos tu negocio con IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="kembacode.css" />
+</head>
+<body>
+
+<!-- =========================================================
+     SCROLL SNAKE (follows scroll on left edge)
+     ========================================================= -->
+<div id="scroll-snake"></div>
+<div class="snake-food" id="snake-food" style="top: 50vh;"></div>
+
+<!-- background pixel grid -->
+<div class="grid-bg"></div>
+
+<!-- =========================================================
+     NAV
+     ========================================================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Kembacode home">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <!-- pixel snake mark, classic 'S' -->
+        <g shape-rendering="crispEdges">
+          <rect x="4"  y="4"  width="4" height="4" fill="#bef264"/>
+          <rect x="8"  y="4"  width="4" height="4" fill="#84cc16"/>
+          <rect x="12" y="4"  width="4" height="4" fill="#84cc16"/>
+          <rect x="16" y="4"  width="4" height="4" fill="#84cc16"/>
+          <rect x="20" y="4"  width="4" height="4" fill="#84cc16"/>
+          <rect x="4"  y="12" width="4" height="4" fill="#84cc16"/>
+          <rect x="8"  y="12" width="4" height="4" fill="#84cc16"/>
+          <rect x="12" y="12" width="4" height="4" fill="#84cc16"/>
+          <rect x="16" y="12" width="4" height="4" fill="#84cc16"/>
+          <rect x="20" y="12" width="4" height="4" fill="#84cc16"/>
+          <rect x="20" y="20" width="4" height="4" fill="#84cc16"/>
+          <rect x="16" y="20" width="4" height="4" fill="#84cc16"/>
+          <rect x="12" y="20" width="4" height="4" fill="#84cc16"/>
+          <rect x="8"  y="20" width="4" height="4" fill="#84cc16"/>
+          <rect x="4"  y="20" width="4" height="4" fill="#facc15"/>
+        </g>
+      </svg>
+      kemba<span class="dot">.</span>code
+    </a>
+
+    <div class="nav-links">
+      <a href="#services">Servicios</a>
+      <a href="#process">Proceso</a>
+      <a href="#cases">Casos</a>
+      <a href="#pricing">Precios</a>
+      <a href="#blog">Blog</a>
+    </div>
+
+    <a href="#contact" class="nav-cta">Agendar demo &rarr;</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero">
+  <div>
+    <div class="eyebrow"><span class="blink"></span> Automatización IA · Marketing · Sistemas</div>
+    <h1 class="hero-title">
+      Tu negocio<br/>
+      en <span class="stack">piloto</span><br/>
+      automático.
+    </h1>
+    <p class="hero-sub">
+      Diseñamos sistemas de IA, agentes conversacionales e integraciones que sistematizan operaciones, marketing y ventas — para que tu equipo deje de operar y empiece a crecer.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn primary">Agendar demo gratuita <span class="arrow">&rarr;</span></a>
+      <a href="#services" class="btn">Ver lo que hacemos</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>+87%</strong>tiempo recuperado</div>
+      <div><strong>3.2x</strong>ROI promedio</div>
+      <div><strong>24/7</strong>operación autónoma</div>
+    </div>
+  </div>
+
+  <!-- Hero terminal -->
+  <div class="terminal">
+    <div class="term-bar">
+      <div class="dots">
+        <span class="dot-c"></span><span class="dot-c"></span><span class="dot-c"></span>
+      </div>
+      <span class="title">~/kembacode — kemba.sh</span>
+    </div>
+    <div class="term-body" id="hero-term"></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     MARQUEE
+     ========================================================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>OpenAI</span><span>Anthropic Claude</span><span>n8n</span><span>Make</span><span>Zapier</span><span>Supabase</span><span>HubSpot</span><span>Notion AI</span><span>LangChain</span><span>Postgres</span><span>Pinecone</span><span>Twilio</span>
+    <span>OpenAI</span><span>Anthropic Claude</span><span>n8n</span><span>Make</span><span>Zapier</span><span>Supabase</span><span>HubSpot</span><span>Notion AI</span><span>LangChain</span><span>Postgres</span><span>Pinecone</span><span>Twilio</span>
+  </div>
+</div>
+
+<!-- =========================================================
+     LOGO VARIATIONS
+     ========================================================= -->
+<section class="section" id="brand">
+  <div class="sec-head">
+    <div class="sec-num">[ 01 / IDENTITY ]</div>
+    <h2 class="sec-title">Cuatro caras<br/>de la serpiente.</h2>
+    <div class="sec-kicker">→ explora<br/>variaciones del logo</div>
+  </div>
+
+  <div class="logo-grid">
+    <!-- LOGO 1: Classic Snake game (8-bit) -->
+    <div class="logo-card">
+      <div class="logo-stage">
+        <svg viewBox="0 0 64 64" shape-rendering="crispEdges">
+          <!-- classic snake S-curve -->
+          <g>
+            <rect x="8"  y="8"  width="6" height="6" fill="#bef264"/>
+            <rect x="14" y="8"  width="6" height="6" fill="#84cc16"/>
+            <rect x="20" y="8"  width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="8"  width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="8"  width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="20" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="20" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="32" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="38" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="20" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="38" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="44" y="44" width="6" height="6" fill="#84cc16"/>
+            <!-- food -->
+            <rect x="50" y="14" width="6" height="6" fill="#facc15"/>
+          </g>
+        </svg>
+      </div>
+      <div class="logo-meta">
+        <strong>v.01 / ARCADE</strong>
+        Snake clásico 8-bit
+      </div>
+    </div>
+
+    <!-- LOGO 2: Snake forming K letter -->
+    <div class="logo-card">
+      <div class="logo-stage">
+        <svg viewBox="0 0 64 64" shape-rendering="crispEdges">
+          <g>
+            <!-- vertical bar of K -->
+            <rect x="12" y="8"  width="6" height="6" fill="#bef264"/>
+            <rect x="12" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="12" y="20" width="6" height="6" fill="#84cc16"/>
+            <rect x="12" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="12" y="32" width="6" height="6" fill="#84cc16"/>
+            <rect x="12" y="38" width="6" height="6" fill="#84cc16"/>
+            <rect x="12" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="12" y="50" width="6" height="6" fill="#84cc16"/>
+            <!-- diagonal up -->
+            <rect x="18" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="24" y="20" width="6" height="6" fill="#84cc16"/>
+            <rect x="30" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="36" y="8"  width="6" height="6" fill="#84cc16"/>
+            <!-- diagonal down -->
+            <rect x="18" y="32" width="6" height="6" fill="#84cc16"/>
+            <rect x="24" y="38" width="6" height="6" fill="#84cc16"/>
+            <rect x="30" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="36" y="50" width="6" height="6" fill="#84cc16"/>
+            <!-- food -->
+            <rect x="44" y="50" width="6" height="6" fill="#facc15"/>
+          </g>
+        </svg>
+      </div>
+      <div class="logo-meta">
+        <strong>v.02 / MONOGRAM</strong>
+        Serpiente forma una K
+      </div>
+    </div>
+
+    <!-- LOGO 3: Coiled circular snake (infinity) -->
+    <div class="logo-card">
+      <div class="logo-stage">
+        <svg viewBox="0 0 64 64" shape-rendering="crispEdges">
+          <g>
+            <!-- top row -->
+            <rect x="14" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="20" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="38" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="44" y="14" width="6" height="6" fill="#84cc16"/>
+            <!-- right -->
+            <rect x="44" y="20" width="6" height="6" fill="#84cc16"/>
+            <rect x="44" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="44" y="32" width="6" height="6" fill="#84cc16"/>
+            <rect x="44" y="38" width="6" height="6" fill="#84cc16"/>
+            <!-- bottom -->
+            <rect x="44" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="38" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="20" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="44" width="6" height="6" fill="#84cc16"/>
+            <!-- left -->
+            <rect x="14" y="38" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="32" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="14" y="20" width="6" height="6" fill="#84cc16"/>
+            <!-- head bites tail -->
+            <rect x="20" y="20" width="6" height="6" fill="#bef264"/>
+            <!-- food center -->
+            <rect x="29" y="29" width="6" height="6" fill="#facc15"/>
+          </g>
+        </svg>
+      </div>
+      <div class="logo-meta">
+        <strong>v.03 / OUROBOROS</strong>
+        Ciclo continuo / automatización
+      </div>
+    </div>
+
+    <!-- LOGO 4: Sigma/zigzag aggressive -->
+    <div class="logo-card">
+      <div class="logo-stage">
+        <svg viewBox="0 0 64 64" shape-rendering="crispEdges">
+          <g>
+            <!-- diagonal down-right top -->
+            <rect x="8"  y="14" width="6" height="6" fill="#bef264"/>
+            <rect x="14" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="20" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="14" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="20" width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="26" width="6" height="6" fill="#84cc16"/>
+            <rect x="20" y="32" width="6" height="6" fill="#84cc16"/>
+            <rect x="26" y="38" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="44" width="6" height="6" fill="#84cc16"/>
+            <rect x="32" y="50" width="6" height="6" fill="#84cc16"/>
+            <rect x="38" y="50" width="6" height="6" fill="#84cc16"/>
+            <rect x="44" y="50" width="6" height="6" fill="#84cc16"/>
+            <rect x="50" y="50" width="6" height="6" fill="#84cc16"/>
+            <!-- food -->
+            <rect x="50" y="14" width="6" height="6" fill="#facc15"/>
+          </g>
+        </svg>
+      </div>
+      <div class="logo-meta">
+        <strong>v.04 / ZIGZAG</strong>
+        Trayectoria agresiva tipo S
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
+<section class="section" id="services">
+  <div class="sec-head">
+    <div class="sec-num">[ 02 / SERVICES ]</div>
+    <h2 class="sec-title">Lo que<br/>automatizamos.</h2>
+    <div class="sec-kicker">→ 7 verticales<br/>integradas</div>
+  </div>
+
+  <div class="services-grid">
+    <div class="service">
+      <div class="svc-num">SVC.01</div>
+      <span class="svc-tag">CORE</span>
+      <div>
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="4" y="4" width="10" height="10"/><rect x="18" y="4" width="10" height="10"/>
+          <rect x="4" y="18" width="10" height="10"/><rect x="18" y="18" width="10" height="10"/>
+          <path d="M14 9h4M14 23h4M9 14v4M23 14v4"/>
+        </svg>
+        <div class="svc-title">Automatización de procesos IA</div>
+        <p class="svc-desc">Identificamos cuellos de botella y los reemplazamos con flujos autónomos que aprenden y se ajustan solos.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="svc-num">SVC.02</div>
+      <div>
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="4" y="6" width="24" height="18"/><path d="M10 28l2-4h8l2 4"/>
+          <circle cx="11" cy="14" r="1.5" fill="currentColor"/><circle cx="21" cy="14" r="1.5" fill="currentColor"/>
+          <path d="M11 18h10"/>
+        </svg>
+        <div class="svc-title">Chatbots y agentes IA</div>
+        <p class="svc-desc">Agentes que califican leads, contestan WhatsApp, agendan reuniones y escalan a humanos solo cuando importa.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="svc-num">SVC.03</div>
+      <div>
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 8l8-4 8 4 8-4v20l-8 4-8-4-8 4z"/>
+          <path d="M12 4v20M20 8v20"/>
+        </svg>
+        <div class="svc-title">Marketing automation</div>
+        <p class="svc-desc">Email, CRM, segmentación y nurturing: campañas que se ejecutan solas y se optimizan con datos reales.</p>
+      </div>
+    </div>
+
+    <div class="service wide">
+      <div class="svc-num">SVC.04</div>
+      <span class="svc-tag">HOT</span>
+      <div>
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="8" cy="8" r="3"/><circle cx="24" cy="8" r="3"/>
+          <circle cx="8" cy="24" r="3"/><circle cx="24" cy="24" r="3"/>
+          <circle cx="16" cy="16" r="3"/>
+          <path d="M10 9l5 6M22 9l-5 6M10 23l5-6M22 23l-5-6"/>
+        </svg>
+        <div class="svc-title">Integraciones n8n / Zapier / Make</div>
+        <p class="svc-desc">Conectamos las herramientas que ya usas — Hubspot, Notion, Slack, Shopify, Stripe — sin migrar nada. Tu stack actual hablando entre sí.</p>
+      </div>
+    </div>
+
+    <div class="service wide">
+      <div class="svc-num">SVC.05</div>
+      <div>
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="6" width="26" height="20" rx="1"/>
+          <path d="M3 11h26"/><circle cx="7" cy="8.5" r="0.8" fill="currentColor"/><circle cx="10" cy="8.5" r="0.8" fill="currentColor"/>
+          <path d="M9 17l3 3 6-6 5 5"/>
+        </svg>
+        <div class="svc-title">Desarrollo web/software a medida</div>
+        <p class="svc-desc">Plataformas, portales internos, e-commerce, dashboards. Código limpio, escalable y construido para conectarse con el resto de tu stack.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="svc-num">SVC.06</div>
+      <div>
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 28V8M4 28h24"/>
+          <rect x="8" y="18" width="4" height="10" fill="currentColor"/>
+          <rect x="14" y="12" width="4" height="16" fill="currentColor"/>
+          <rect x="20" y="22" width="4" height="6" fill="currentColor"/>
+          <path d="M8 14l6-4 6 6 6-8" stroke-dasharray="2 2"/>
+        </svg>
+        <div class="svc-title">Análisis de datos & dashboards</div>
+        <p class="svc-desc">Tus KPIs en tiempo real con alertas IA que detectan anomalías antes que tú.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="svc-num">SVC.07</div>
+      <div>
+        <svg class="svc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="16" cy="13" r="6"/><path d="M16 19v6M11 25h10"/>
+          <path d="M13 11l2 2 4-4"/>
+        </svg>
+        <div class="svc-title">Consultoría / estrategia IA</div>
+        <p class="svc-desc">Diagnosticamos qué automatizar primero. Roadmap claro con ROI proyectado antes de escribir una línea.</p>
+      </div>
+    </div>
+
+    <div class="service full">
+      <div class="svc-num">SVC.∞</div>
+      <span class="svc-tag">→ TODO JUNTO</span>
+      <div>
+        <div class="svc-title" style="font-size:32px">Sistemas operativos completos para tu negocio.</div>
+        <p class="svc-desc" style="max-width:680px">Los 7 servicios encima funcionan mejor combinados: estrategia → desarrollo → integración → automatización → analítica. Un solo equipo, una sola visión, una sola serpiente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PROCESS
+     ========================================================= -->
+<section class="section" id="process">
+  <div class="sec-head">
+    <div class="sec-num">[ 03 / PROCESS ]</div>
+    <h2 class="sec-title">Cómo<br/>trabajamos.</h2>
+    <div class="sec-kicker">→ 4 movimientos<br/>de la serpiente</div>
+  </div>
+
+  <div class="process">
+    <div class="step">
+      <div class="step-num">PASO 01 // DIAGNÓSTICO</div>
+      <div class="step-pixels">
+        <span class="head"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="step-title">Mapeamos.</div>
+      <p class="step-desc">Sesión de 90 min para entender tus procesos, herramientas y dónde se fuga el tiempo. Sales con un mapa.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">PASO 02 // DISEÑO</div>
+      <div class="step-pixels">
+        <span class="on"></span><span class="head"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="step-title">Diseñamos.</div>
+      <p class="step-desc">Arquitectura del sistema, agentes, integraciones y métricas. Aprobamos juntos antes de tocar código.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">PASO 03 // BUILD</div>
+      <div class="step-pixels">
+        <span class="on"></span><span class="on"></span><span class="on"></span><span class="head"></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span class="on"></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span class="on"></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span class="on"></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="step-title">Construimos.</div>
+      <p class="step-desc">Sprints semanales con demos en vivo. Primer flujo automatizado funcionando entre semana 2 y 4.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">PASO 04 // SCALE</div>
+      <div class="step-pixels">
+        <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="head"></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="on"></span>
+      </div>
+      <div class="step-title">Escalamos.</div>
+      <p class="step-desc">Monitoreo, mejora continua y nuevas automatizaciones cada mes. La serpiente sigue creciendo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     DEMO TERMINAL (interactive)
+     ========================================================= -->
+<section class="section" id="demo">
+  <div class="sec-head">
+    <div class="sec-num">[ 04 / LIVE DEMO ]</div>
+    <h2 class="sec-title">Probá la<br/>serpiente.</h2>
+    <div class="sec-kicker">→ terminal real<br/>↵ enter para ejecutar</div>
+  </div>
+
+  <div class="demo-wrap">
+    <div class="demo-info">
+      <h3>Hablale como vos.<br/>Responde como Kemba.</h3>
+      <p>Esta terminal corre comandos simulados que muestran cómo nuestros agentes IA procesan tareas reales: calificar un lead, generar un reporte, redactar copy, conectar tu CRM. Probá los comandos sugeridos o escribí el tuyo.</p>
+      <div class="demo-cmds" id="demo-cmds">
+        <button class="demo-cmd" data-cmd="agent qualify --lead acme">
+          <span>agent qualify --lead acme</span><kbd>↵</kbd>
+        </button>
+        <button class="demo-cmd" data-cmd="campaign run blackfriday">
+          <span>campaign run blackfriday</span><kbd>↵</kbd>
+        </button>
+        <button class="demo-cmd" data-cmd="report weekly">
+          <span>report weekly</span><kbd>↵</kbd>
+        </button>
+        <button class="demo-cmd" data-cmd="connect hubspot">
+          <span>connect hubspot</span><kbd>↵</kbd>
+        </button>
+        <button class="demo-cmd" data-cmd="help">
+          <span>help</span><kbd>↵</kbd>
+        </button>
+      </div>
+    </div>
+
+    <div class="terminal demo-term">
+      <div class="term-bar">
+        <div class="dots"><span class="dot-c"></span><span class="dot-c"></span><span class="dot-c"></span></div>
+        <span class="title">kemba@agent:~ — interactive</span>
+      </div>
+      <div class="term-body" id="demo-term-body"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CASES
+     ========================================================= -->
+<section class="section" id="cases">
+  <div class="sec-head">
+    <div class="sec-num">[ 05 / CASES ]</div>
+    <h2 class="sec-title">Donde<br/>ya mordió.</h2>
+    <div class="sec-kicker">→ proyectos<br/>en producción</div>
+  </div>
+
+  <div class="cases">
+    <div class="case">
+      <div class="case-tag">E-COMMERCE · 2026</div>
+      <div class="case-img">[ screenshot del dashboard ]</div>
+      <div class="case-title">Tienda de moda LATAM automatiza atención WhatsApp</div>
+      <p class="case-desc">Agente IA contesta el 78% de las consultas, agenda devoluciones y escala a humanos solo casos complejos.</p>
+      <div class="case-metrics">
+        <div><strong>78%</strong>auto-resuelto</div>
+        <div><strong>3min</strong>tiempo respuesta</div>
+        <div><strong>+22%</strong>conversión</div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-tag">SAAS B2B · 2025</div>
+      <div class="case-img">[ flujo de calificación de leads ]</div>
+      <div class="case-title">Startup SaaS recorta ciclo de ventas a la mitad</div>
+      <p class="case-desc">Lead scoring + nurturing automatizado en Hubspot. Sales solo recibe leads calificados, listos para cerrar.</p>
+      <div class="case-metrics">
+        <div><strong>−52%</strong>ciclo de venta</div>
+        <div><strong>2.4x</strong>leads MQL</div>
+        <div><strong>14d</strong>implementación</div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-tag">AGENCIA · 2025</div>
+      <div class="case-img">[ generador de contenido IA ]</div>
+      <div class="case-title">Agencia de marketing escala a 12 clientes sin crecer equipo</div>
+      <p class="case-desc">Pipeline de contenido IA: briefs → drafts → revisión humana → publicación multicanal automática.</p>
+      <div class="case-metrics">
+        <div><strong>4x</strong>output/persona</div>
+        <div><strong>−68%</strong>tiempo edición</div>
+        <div><strong>+12</strong>cuentas nuevas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PRICING
+     ========================================================= -->
+<section class="section" id="pricing">
+  <div class="sec-head">
+    <div class="sec-num">[ 06 / PRICING ]</div>
+    <h2 class="sec-title">Planes que<br/>no muerden.</h2>
+    <div class="sec-kicker">→ USD/mes<br/>· cancelá cuando quieras</div>
+  </div>
+
+  <div class="pricing">
+    <div class="plan">
+      <div class="plan-name">// STARTER</div>
+      <div class="plan-price">$890<small> /mes</small></div>
+      <p class="plan-desc">Para equipos pequeños que quieren su primera automatización funcionando ya.</p>
+      <ul class="plan-features">
+        <li>1 flujo IA en producción</li>
+        <li>Hasta 3 integraciones (n8n / Zapier)</li>
+        <li>1 chatbot o agente</li>
+        <li>Soporte por Slack — 48h</li>
+        <li>Dashboard básico</li>
+      </ul>
+      <a href="#contact" class="plan-cta">Empezar →</a>
+    </div>
+
+    <div class="plan featured">
+      <div class="plan-name">// GROWTH</div>
+      <div class="plan-price">$2,490<small> /mes</small></div>
+      <p class="plan-desc">El plan donde la serpiente crece. Marketing + ventas + ops automatizadas.</p>
+      <ul class="plan-features">
+        <li>Hasta 6 flujos IA en producción</li>
+        <li>Integraciones ilimitadas</li>
+        <li>3 agentes / chatbots</li>
+        <li>Marketing automation completa</li>
+        <li>Dashboard con alertas IA</li>
+        <li>Soporte Slack — 4h · canal dedicado</li>
+        <li>1 sesión estratégica/mes</li>
+      </ul>
+      <a href="#contact" class="plan-cta">Hablemos →</a>
+    </div>
+
+    <div class="plan">
+      <div class="plan-name">// SCALE</div>
+      <div class="plan-price">Custom</div>
+      <p class="plan-desc">Sistemas a medida, desarrollo de software propio, infraestructura enterprise.</p>
+      <ul class="plan-features">
+        <li>Flujos IA ilimitados</li>
+        <li>Desarrollo de software propio</li>
+        <li>SLA personalizado</li>
+        <li>Equipo dedicado</li>
+        <li>On-call 24/7</li>
+        <li>Auditoría seguridad + compliance</li>
+        <li>Roadmap trimestral</li>
+      </ul>
+      <a href="#contact" class="plan-cta">Cotizar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TESTIMONIALS
+     ========================================================= -->
+<section class="section" id="testimonials">
+  <div class="sec-head">
+    <div class="sec-num">[ 07 / VOICES ]</div>
+    <h2 class="sec-title">Lo que dicen<br/>los que se animaron.</h2>
+    <div class="sec-kicker">→ clientes<br/>· 4.9 / 5</div>
+  </div>
+
+  <div class="testimonials">
+    <div class="testi">
+      <p class="testi-quote">Pasamos de contestar 200 WhatsApps al día a contestar 12. El equipo recuperó 30 horas por semana. No volvemos atrás.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">MR</div>
+        <div>
+          <div class="testi-name">María Restrepo</div>
+          <div class="testi-role">COO · Linea Moda</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi">
+      <p class="testi-quote">En 3 semanas teníamos un agente cerrando demos solo. Kembacode entiende negocio, no solo código.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">JT</div>
+        <div>
+          <div class="testi-name">Julián Tovar</div>
+          <div class="testi-role">CEO · Stackly</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi">
+      <p class="testi-quote">Cada flujo que conectaron pagó su costo el primer mes. El ROI es absurdo. Ya estamos en el plan Scale.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">LF</div>
+        <div>
+          <div class="testi-name">Laura Fernández</div>
+          <div class="testi-role">CMO · Verde Capital</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi">
+      <p class="testi-quote">Probamos 4 agencias antes. Solo Kemba entregó algo en producción y mantenido. Por fin se siente serio.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">RC</div>
+        <div>
+          <div class="testi-name">Ricardo Castro</div>
+          <div class="testi-role">Fundador · Nodo Studio</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi">
+      <p class="testi-quote">El dashboard con alertas IA nos salvó de una caída de conversión que ni habíamos visto. Detectaron antes que el equipo.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">AP</div>
+        <div>
+          <div class="testi-name">Andrea Páez</div>
+          <div class="testi-role">Head of Growth · Cova</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi">
+      <p class="testi-quote">Migramos todo el marketing automation y no perdimos un solo lead. Limpio. Documentado. En español.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">DH</div>
+        <div>
+          <div class="testi-name">Diego Herrera</div>
+          <div class="testi-role">Director · Atlas Legal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TEAM / ABOUT
+     ========================================================= -->
+<section class="section" id="about">
+  <div class="sec-head">
+    <div class="sec-num">[ 08 / TEAM ]</div>
+    <h2 class="sec-title">Quiénes la<br/>alimentamos.</h2>
+    <div class="sec-kicker">→ 9 personas<br/>· 4 países</div>
+  </div>
+
+  <div class="team-wrap">
+    <div class="team-intro">
+      <h3>Ingenieros, estrategas y curiosos crónicos.</h3>
+      <p>Kembacode nació de una obsesión: que los equipos pequeños jueguen en la liga de los grandes — sin contratar el doble de gente.</p>
+      <p>Construimos sistemas que se ven simples por fuera, pero por dentro son una serpiente de procesos que se mueven solos. Nos importa el detalle, el negocio y entregar.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="member">
+        <div class="member-avatar">K</div>
+        <div>
+          <div class="member-name">Camilo Kemba</div>
+          <div class="member-role">Founder · Estrategia IA</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">S</div>
+        <div>
+          <div class="member-name">Sofía Marín</div>
+          <div class="member-role">Lead Engineer</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">M</div>
+        <div>
+          <div class="member-name">Mateo Salas</div>
+          <div class="member-role">AI Agents</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">V</div>
+        <div>
+          <div class="member-name">Valeria Ortiz</div>
+          <div class="member-role">Marketing Automation</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">N</div>
+        <div>
+          <div class="member-name">Nicolás Vargas</div>
+          <div class="member-role">Full-stack</div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">+</div>
+        <div>
+          <div class="member-name">+4 más</div>
+          <div class="member-role">Diseño · Data · Ops</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     BLOG
+     ========================================================= -->
+<section class="section" id="blog">
+  <div class="sec-head">
+    <div class="sec-num">[ 09 / NOTES ]</div>
+    <h2 class="sec-title">Lo último<br/>del blog.</h2>
+    <div class="sec-kicker">→ ensayos<br/>· tutoriales</div>
+  </div>
+
+  <div class="blog-grid">
+    <article class="post">
+      <div class="post-meta"><span class="cat">// IA AGENTS</span><span>28 MAY 2026</span></div>
+      <h3 class="post-title">Cómo construimos un agente que califica leads en 6 idiomas (y no se equivoca)</h3>
+      <div class="post-read"><span>Por Sofía M.</span><span>8 min →</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-meta"><span class="cat">// AUTOMATION</span><span>21 MAY 2026</span></div>
+      <h3 class="post-title">n8n vs Make vs Zapier en 2026: cuál elegir según el tamaño de tu equipo</h3>
+      <div class="post-read"><span>Por Camilo K.</span><span>12 min →</span></div>
+    </article>
+
+    <article class="post">
+      <div class="post-meta"><span class="cat">// PLAYBOOK</span><span>14 MAY 2026</span></div>
+      <h3 class="post-title">El framework SNAKE: 5 pasos para sistematizar tu marketing sin romperlo</h3>
+      <div class="post-read"><span>Por Valeria O.</span><span>6 min →</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- =========================================================
+     FAQ
+     ========================================================= -->
+<section class="section" id="faq">
+  <div class="sec-head">
+    <div class="sec-num">[ 10 / FAQ ]</div>
+    <h2 class="sec-title">Lo que<br/>siempre preguntan.</h2>
+    <div class="sec-kicker">→ click para<br/>desplegar</div>
+  </div>
+
+  <div class="faq" id="faq-list">
+    <div class="faq-item open">
+      <button class="faq-q">¿En cuánto tiempo veo resultados? <span class="plus">+</span></button>
+      <div class="faq-a">Tenemos un primer flujo automatizado funcionando entre la semana 2 y 4 según complejidad. El ROI promedio se ve dentro del trimestre.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Tengo que migrar mis herramientas? <span class="plus">+</span></button>
+      <div class="faq-a">No. Diseñamos sobre tu stack actual. Si usás Hubspot, Notion, Shopify, Slack o cualquier herramienta común, la conectamos. Solo recomendamos migrar si lo que usás cuesta más mantenerlo que reemplazarlo.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Y la seguridad de mis datos? <span class="plus">+</span></button>
+      <div class="faq-a">Firmamos NDA y trabajamos con principios de privilegio mínimo. Para Scale, ofrecemos despliegues self-hosted, encriptación end-to-end y auditorías SOC2/GDPR.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Mi equipo necesita saber programar? <span class="plus">+</span></button>
+      <div class="faq-a">Para nada. Construimos los sistemas, los documentamos y los entrenamos. La operación diaria se hace desde dashboards visuales o desde las herramientas que ya usan.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Qué modelos de IA usan? <span class="plus">+</span></button>
+      <div class="faq-a">Mezclamos modelos según el caso: Claude, GPT, Llama, modelos especializados (Whisper, embeddings). Optimizamos por costo / calidad / latencia según la tarea.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Trabajan con empresas fuera de LATAM? <span class="plus">+</span></button>
+      <div class="faq-a">Sí. Tenemos clientes en México, Colombia, España, Argentina y EE.UU. Trabajamos en español e inglés sin diferencia.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+<section class="section" id="contact">
+  <div class="sec-head">
+    <div class="sec-num">[ 11 / CONTACT ]</div>
+    <h2 class="sec-title">Agendá<br/>tu demo.</h2>
+    <div class="sec-kicker">→ 30 min<br/>· sin compromiso</div>
+  </div>
+
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h3>Una llamada.<br/>Un mapa.<br/>Cero presión.</h3>
+      <p>En 30 minutos te mostramos cómo podríamos automatizar tu primer proceso — específico a tu negocio, con números reales. Si te interesa seguimos. Si no, te quedás con el mapa gratis.</p>
+      <div class="contact-list">
+        <div class="contact-row"><span class="label">EMAIL</span><span class="val">hola@kembacode.com</span></div>
+        <div class="contact-row"><span class="label">WHATSAPP</span><span class="val">+57 320 555 1029</span></div>
+        <div class="contact-row"><span class="label">OFICINA</span><span class="val">Medellín · Ciudad de México · Madrid (remoto)</span></div>
+        <div class="contact-row"><span class="label">HORARIO</span><span class="val">L–V · 09:00 → 18:00 GMT-5</span></div>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contact-form">
+      <div class="form-row">
+        <div class="field">
+          <label>NOMBRE</label>
+          <input type="text" placeholder="Tu nombre" required />
+        </div>
+        <div class="field">
+          <label>EMPRESA</label>
+          <input type="text" placeholder="Acme Corp" />
+        </div>
+      </div>
+      <div class="field">
+        <label>EMAIL</label>
+        <input type="email" placeholder="tu@empresa.com" required />
+      </div>
+      <div class="field">
+        <label>¿QUÉ QUERÉS AUTOMATIZAR?</label>
+        <select>
+          <option>Atención a clientes / chatbots</option>
+          <option>Marketing y ventas</option>
+          <option>Operaciones internas</option>
+          <option>Análisis de datos</option>
+          <option>Desarrollo a medida</option>
+          <option>Todavía no sé — quiero diagnóstico</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>CONTEXTO (OPCIONAL)</label>
+        <textarea placeholder="Contanos sobre tu equipo, herramientas actuales, o el dolor que querés resolver."></textarea>
+      </div>
+      <button type="submit" class="form-submit">ENVIAR &nbsp;→&nbsp; AGENDAR DEMO</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <a href="#top" class="brand">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <g shape-rendering="crispEdges">
+            <rect x="4"  y="4"  width="4" height="4" fill="#bef264"/>
+            <rect x="8"  y="4"  width="4" height="4" fill="#84cc16"/>
+            <rect x="12" y="4"  width="4" height="4" fill="#84cc16"/>
+            <rect x="16" y="4"  width="4" height="4" fill="#84cc16"/>
+            <rect x="20" y="4"  width="4" height="4" fill="#84cc16"/>
+            <rect x="4"  y="12" width="4" height="4" fill="#84cc16"/>
+            <rect x="8"  y="12" width="4" height="4" fill="#84cc16"/>
+            <rect x="12" y="12" width="4" height="4" fill="#84cc16"/>
+            <rect x="16" y="12" width="4" height="4" fill="#84cc16"/>
+            <rect x="20" y="12" width="4" height="4" fill="#84cc16"/>
+            <rect x="20" y="20" width="4" height="4" fill="#84cc16"/>
+            <rect x="16" y="20" width="4" height="4" fill="#84cc16"/>
+            <rect x="12" y="20" width="4" height="4" fill="#84cc16"/>
+            <rect x="8"  y="20" width="4" height="4" fill="#84cc16"/>
+            <rect x="4"  y="20" width="4" height="4" fill="#facc15"/>
+          </g>
+        </svg>
+        kemba<span class="dot">.</span>code
+      </a>
+      <p class="tagline">Sistematizamos tu negocio con IA. Una serpiente que crece con vos.</p>
+    </div>
+    <div class="foot-col">
+      <h5>PRODUCTO</h5>
+      <a href="#services">Servicios</a>
+      <a href="#process">Proceso</a>
+      <a href="#pricing">Precios</a>
+      <a href="#demo">Demo</a>
+    </div>
+    <div class="foot-col">
+      <h5>EMPRESA</h5>
+      <a href="#about">Equipo</a>
+      <a href="#cases">Casos</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contacto</a>
+    </div>
+    <div class="foot-col">
+      <h5>SOCIAL</h5>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">YouTube</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 KEMBACODE · TODOS LOS DERECHOS RESERVADOS</span>
+    <span>BUILT WITH ▲ &nbsp;·&nbsp; HOSTED IN LATAM</span>
+  </div>
+</footer>
+
+<script src="kembacode-app.js"></script>
+</body>
+</html>
